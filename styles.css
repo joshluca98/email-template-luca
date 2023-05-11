@@ -1,0 +1,58 @@
+html,body {
+    height: 100%;
+    color: white;
+    background: black;
+  }
+
+
+#gray {
+    outline: gray 10px solid;
+}
+
+#blue {
+    outline: blue 5px solid;
+}
+
+#green {
+    outline: green 5px solid;
+}
+
+.category-col {
+    height: 100%;
+}
+
+.category-heading {
+    height: 4%;
+}
+
+.category-content {
+    height: 93%;
+    width: 95%;
+}
+
+
+.list-col {
+    height: 100%;
+}
+
+.list-heading {
+    height: 4%;
+}
+
+.list-content {
+    height: 86%;
+    width: 95%;
+}
+
+
+.email-col {
+    height: 100%;
+}
+
+.email-heading {
+    height: 4%;
+}
+
+.email-content {
+    height: 93%;
+}
