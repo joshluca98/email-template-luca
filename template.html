@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>email-template-luca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ef55d7b33c.js" crossorigin="anonymous"></script>
@@ -13,57 +13,45 @@
 
     <!-- General Page Container -->
     <div class="general-container container-fluid d-flex flex-column min-vh-100">
-
         <!-- Navigation Bar -->
-        <div class="main-nav row d-flex align-items-center justify-content-between justify-content-xl-between bg-black">
-
+        <div class="row d-flex align-items-center justify-content-between justify-content-xl-between bg-black">
             <!-- Menu Button -->
             <div class="col-auto d-flex d-xl-none align-items-center">
-                
-                    <div class="hover-effect"><i class="fa-solid fa-bars fa-2xl fa-fw"></i></div>
-                
-            <div class="col-auto mt-3 mx-4 lh-1">
-                <!-- Folder Name -->
-                <h5>Inbox</h5>
+                <div class="button-hover-effect is-clickable"><i class="fa-solid fa-bars fa-2xl fa-fw"></i></div>
+                <div class="col-auto mt-3 mx-2">
+                    <!-- Folder Name -->
+                    <h5>Inbox</h5>
+                </div>
             </div>
-            </div>
-
             <!-- Logo Column -->
             <div class="d-none col-auto col-xl-2 d-xl-flex align-items-center justify-content-center bg-custom2">
                 <div class="d-flex justify-content-center">
-                    <a href="#" class="">
-                        <img height=50 src="images/logo.png">
-                    </a>
+                    <a href="#" class=""><img height=50 src="images/logo.png"></a>
                 </div>
             </div>
-        
             <!-- Button/User Icon Column -->
             <div class="col-auto d-flex align-items-center justify-content-end my-3">
-                <div><i class="fa-solid fa-gear fa-xl fa-fw hover-effect"></i></div>
-                <div><i class="fa-solid fa-flag fa-xl fa-fw hover-effect"></i></div>
-                <div><i class="fa-solid fa-circle-question fa-xl fa-fw hover-effect"></i></div>
-                <div class="user-icon-container"><i class="fa-regular fa-circle-user fa-2xl fa-fw hover-effect"></i></div>
+                <div><i class="fa-solid fa-gear fa-xl fa-fw button-hover-effect"></i></div>
+                <div><i class="fa-solid fa-flag fa-xl fa-fw button-hover-effect"></i></div>
+                <div><i class="fa-solid fa-circle-question fa-xl fa-fw button-hover-effect"></i></div>
+                <div><i class="fa-regular fa-circle-user fa-2xl fa-fw button-hover-effect"></i></div>
             </div>
         </div>
         <!-- End Navigation Bar -->
-
         <!-- 3 Columns Row -->
         <div class="row h-100 flex-grow-1">
-
             <!-- Column 1 (Folders) -->
             <div class="d-none d-sm-flex d-md-none d-xl-flex flex-column justify-content-between col-sm-4 col-lg-12 col-xl-2 bg-black">
-                
                 <div class="row">
                     <div class="container mt-4 d-flex flex-column">
-                    
                         <div class="d-flex justify-content-center">
                             <button type="button" class="stretch-button btn btn-primary">
                                 <span class="text-blue">..</span><i class="fa-solid fa-pen-to-square fa-lg fa-fw"></i>
                             </button>
                         </div>
-                    
+                        <!-- General Folders -->
                         <div class="list-group w-100 mt-3" id="gray">
-                            <a href="#" class="text-white list-group-item"><i class="fa-solid fa-inbox fa-fw"></i></i>Inbox</a>
+                            <a href="#" class="is-selected text-white list-group-item"><i class="fa-solid fa-inbox fa-fw"></i></i>Inbox</a>
                             <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-star fa-fw"></i>Favorites</a>
                             <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-envelope-circle-check fa-fw"></i>Sent</a>
                             <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-envelope-open-text fa-fw"></i>Drafts</a>
@@ -71,6 +59,7 @@
                             <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-trash fa-fw"></i>Trash</a>
                         </div>
                         <hr class="my-3"/>
+                        <!-- Custom Label Folders -->
                         <div class="list-group w-100" id="gray">
                             <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-person fa-fw"></i>Personal</a>
                             <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-briefcase fa-fw"></i>Work</a>
@@ -81,29 +70,25 @@
                     </div>
                 </div>
             </div>
-            <!-- End Column 1 -->
-
             <!-- Column 2 (List of Emails) -->
             <div class="email-list-column d-flex flex-column col-sm-8 col-md-5 col-lg-5 col-xl-4 bg-custom2 px-2">
-
-                
                 <div class="container-fluid mt-1 mb-1 d-flex flex-column justify-content-start p-4 bg-black flex-fill rounded">
-
                     <!-- Mini Nav Bar -->
-                    <div class="row d-flex align-items-center justify-content-between mb-3">
-                        <div class="col-auto d-sm-none d-md-flex d-xl-none">
+                    <div class="row d-flex align-items-center justify-content-between mb-3 p-3 bg-custom1 rounded">
+                        <!-- Compose Button -->
+                        <div class="col-auto order-md-1 order-lg-1 d-sm-none d-md-flex d-xl-none">
                             <button type="button" class="btn btn-primary">
                             <span class="text-blue">..</span><i class="fa-solid fa-pen-to-square fa-lg fa-fw"></i>
                             </button>
                         </div>
                         <!-- Search Column -->
-                        <div class="col-auto col-md-5 col-lg-auto flex-fill">
-                            <form class="col-lg-auto" role="search">
+                        <div class="col-auto col-md-12 col-lg-6 order-md-3 order-lg-2 flex-fill mt-md-3 mt-lg-0">
+                            <form role="search">
                                 <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search...">
                             </form>
                         </div>
                         <!-- Sort Dropdown -->
-                        <div class="col-auto d-flex align-items-center justify-content-start">
+                        <div class="col-auto order-md-2 order-lg-3 d-flex align-items-center justify-content-start">
                             <div class="dropdown">
                                 <button class="stretch-button no-bg btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
                                 <ul class="dropdown-menu">
@@ -117,7 +102,7 @@
                     <!-- End Mini Nav Bar -->
 
                     <!-- Mail Items -->
-                    <div class="mail-items-container d-flex flex-column align-items-center justify-content-between mail-container overflow-auto p-2">
+                    <div class="flex-fill mail-items-container d-flex flex-column align-items-center justify-content-between mail-container overflow-auto p-2">
                         <div class="noclick mail-item d-flex justify-content-center align-items-center row bg-custom1 is-selected ">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="col-7 mt-3">
@@ -293,8 +278,6 @@
                  
 
             </div>
-            <!-- End Column 2 -->
-
             <!-- Column 3 (Email Viewport) -->
             <div class="d-none d-md-block col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-6 bg-custom2 p-4">
                 
@@ -314,13 +297,13 @@
                     </div>
                     <div class="row p-2 text-end border-bottom">
                         <ul class="fa-ul">
-                            <li class="fa-li"><i class="fa-regular fa-star fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-reply fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-envelope-open fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-envelope fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-box-archive fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-trash fa-fw hover-effect"></i></li>
-                            <li class="fa-li"><i class="fa-solid fa-ellipsis fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-regular fa-star fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-reply fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-envelope-open fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-envelope fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-box-archive fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-trash fa-fw button-hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-ellipsis fa-fw button-hover-effect"></i></li>
                         </ul>
                     </div>
                     <div class="email-content row flex-grow-1 text-white p-2 border-bottom">
@@ -342,7 +325,6 @@
                     
                 </div>
             </div>
-            <!-- End Column 3 -->
         </div>
         <!-- End 3 Columns Row -->
     </div>
