@@ -1,58 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 html,body {
     height: 100%;
     color: white;
     background: black;
+    overflow: auto;
+    max-height: 100vh;
   }
 
-
-#gray {
-    outline: gray 10px solid;
+.list-group-item {
+    background-color: black;
 }
 
-#blue {
-    outline: blue 5px solid;
+.main-nav {
+    background-color: black;
 }
 
-#green {
-    outline: green 5px solid;
+.bg-black {
+    background-color: black;
 }
 
-.category-col {
-    height: 100%;
+.bg-custom1 {
+    background-color: #111;
 }
 
-.category-heading {
-    height: 4%;
+.bg-custom2 {
+    background-color: #222;
 }
 
-.category-content {
-    height: 93%;
-    width: 95%;
+.stretch-button {
+    width: 100%;
 }
 
-
-.list-col {
-    height: 100%;
-}
-
-.list-heading {
-    height: 4%;
-}
-
-.list-content {
-    height: 86%;
-    width: 95%;
+button.btn:hover:not(.no-bg) {
+    background-color: #0d6efd;
+    filter: brightness(125%);
 }
 
 
-.email-col {
-    height: 100%;
+a.list-group-item:hover{
+    background: #0d6efd;
+    color: black !important;
+}
+a.list-group-item:focus{
+    background: #0d6efd;
 }
 
-.email-heading {
-    height: 4%;
+.mail-item:hover{
+    filter: brightness(125%);
+    transform: scale(101%);
+    cursor: default;
 }
 
-.email-content {
-    height: 93%;
+.mail-item:hover:not(.noclick){
+    cursor: pointer !important;
+}
+
+.mail-item:active:not(.text-muted){
+    transform: translateY(1px);
+}
+
+.mail-item{
+    width: 100%;
+}
+
+.company-heading {
+    font-family: Muli;
+}
+
+i {
+    margin-right: 10px;
+    display: inline;
+}
+
+li {
+    display: inline;
+}
+
+.user-icon-container{
+    margin-right: 5px;
+}
+
+.hover-effect:hover{
+    
+    transform: scale(1.25);
+}
+
+.text-blue {
+    color: #0d6efd;
+}
+
+.email-content{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .is-selected {
+        background: #333;
+        border: 1px solid white;
+    }
+  }
+
+  .mail-items-container{
+    height: 80vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #242424;
+    border-radius: 5px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,1); */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #484848;
+    width: 2px;
+    border-radius: 5px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7); */
 }

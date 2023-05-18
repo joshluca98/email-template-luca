@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ef55d7b33c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- General Page Container -->
+    <div class="general-container container-fluid d-flex flex-column min-vh-100">
+
+        <!-- Navigation Bar -->
+        <div class="main-nav row d-flex align-items-center justify-content-between justify-content-xl-between bg-black">
+
+            <!-- Menu Button -->
+            <div class="col-auto d-flex d-xl-none align-items-center">
+                
+                    <div class="hover-effect"><i class="fa-solid fa-bars fa-2xl fa-fw"></i></div>
+                
+            <div class="col-auto mt-3 mx-4 lh-1">
+                <!-- Folder Name -->
+                <h5>Inbox</h5>
+            </div>
+            </div>
+
+            <!-- Logo Column -->
+            <div class="d-none col-auto col-xl-2 d-xl-flex align-items-center justify-content-center bg-warning">
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="">
+                        <img height=50 src="images/logo.png">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Button/User Icon Column -->
+            <div class="col-auto d-flex align-items-center justify-content-end my-3">
+                <div><i class="fa-solid fa-gear fa-xl fa-fw hover-effect"></i></div>
+                <div><i class="fa-solid fa-flag fa-xl fa-fw hover-effect"></i></div>
+                <div><i class="fa-solid fa-circle-question fa-xl fa-fw hover-effect"></i></div>
+                <div class="user-icon-container"><i class="fa-regular fa-circle-user fa-2xl fa-fw hover-effect"></i></div>
+            </div>
+        </div>
+        <!-- End Navigation Bar -->
+
+        <!-- 3 Columns Row -->
+        <div class="row h-100 flex-grow-1">
+
+            <!-- Column 1 (Folders) -->
+            <div class="d-none d-sm-flex d-md-none d-xl-flex flex-column justify-content-between col-sm-4 col-lg-12 col-xl-2 bg-black">
+                
+                <div class="row">
+                    <div class="container mt-4 d-flex flex-column">
+                    
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="stretch-button btn btn-primary">
+                                <span class="text-blue">..</span><i class="fa-solid fa-pen-to-square fa-lg fa-fw"></i>
+                            </button>
+                        </div>
+                    
+                        <div class="list-group w-100 mt-3" id="gray">
+                            <a href="#" class="text-white list-group-item"><i class="fa-solid fa-inbox fa-fw"></i></i>Inbox</a>
+                            <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-star fa-fw"></i>Favorites</a>
+                            <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-envelope-circle-check fa-fw"></i>Sent</a>
+                            <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-envelope-open-text fa-fw"></i>Drafts</a>
+                            <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-box-archive fa-fw"></i>Archive</a>
+                            <a href="#" class="text-white list-group-item mt-1"><i class="fa-solid fa-trash fa-fw"></i>Trash</a>
+                        </div>
+                        <hr class="my-3"/>
+                        <div class="list-group w-100" id="gray">
+                            <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-person fa-fw"></i>Personal</a>
+                            <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-briefcase fa-fw"></i>Work</a>
+                            <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-school fa-fw"></i>School</a>
+                            <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-dollar-sign fa-fw"></i>Finances</a>
+                            <a href="#" class="text-white list-group-item list-group-item-action mt-1"><i class="fa-solid fa-lightbulb fa-fw"></i>Bay Valley Tech</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Column 1 -->
+
+            <!-- Column 2 (List of Emails) -->
+            <div class="email-list-column d-flex flex-column col-sm-8 col-md-5 col-lg-5 col-xl-4 bg-custom2 px-2">
+
+                
+                <div class="container-fluid mt-1 mb-1 d-flex flex-column justify-content-start p-4 bg-black flex-fill rounded">
+
+                    <!-- Mini Nav Bar -->
+                    <div class="row d-flex align-items-center justify-content-between mb-3">
+                        <div class="col-auto d-sm-none d-md-flex d-xl-none">
+                            <button type="button" class="btn btn-primary">
+                            <span class="text-blue">..</span><i class="fa-solid fa-pen-to-square fa-lg fa-fw"></i>
+                            </button>
+                        </div>
+                        <!-- Search Column -->
+                        <div class="col-auto col-md-5 col-lg-auto flex-fill">
+                            <form class="col-lg-auto" role="search">
+                                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search...">
+                            </form>
+                        </div>
+                        <!-- Sort Dropdown -->
+                        <div class="col-auto d-flex align-items-center justify-content-start">
+                            <div class="dropdown">
+                                <button class="stretch-button no-bg btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Newest First</a></li>
+                                    <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                                    <li><a class="dropdown-item" href="#">Custom</a></li>
+                                </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- End Mini Nav Bar -->
+
+                    <!-- Mail Items -->
+                    <div class="mail-items-container d-flex flex-column align-items-center justify-content-between mail-container overflow-auto p-2">
+                        <div class="noclick mail-item d-flex justify-content-center align-items-center row bg-custom1 is-selected ">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6>Julie Adams</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p>Jun 02</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Important Changes To Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mail-item mt-1 d-flex justify-content-center align-items-center  bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Bay Valley Tech</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">May 13</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Spring Cohort Announcement</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Steven Smith</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Apr 12</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Learn the Secrets of JavaScript Today!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Michael Martinez</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Mar 28</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Work Issues: Please Advise</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Ric Flair</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Mar 09</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Looking for a chance to join the WWE?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Wells Fargo</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Feb 24</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Credit Card Bill: Overdue</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">WordPress.com</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Feb 17</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Reminder: 30% off WP.com plans</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Robinhood</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Feb 05</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Notice: Transaction Executed</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Google</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Feb 01</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Password Reset Request</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">WordPress.com</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Jan 19</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Reminder: 15% off WP.com plans</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mail-item mt-1 d-flex justify-content-center align-items-center row bg-custom1">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-7 mt-3">
+                                    <h6 class="fw-bold">Microsoft</h6>
+                                </div>
+                                <div class="col-auto text-end d-none d-md-block ">
+                                    <p class="fw-bold">Jan 11</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p>Upgrade To Windows 11 Today!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- End Mail Items -->
+                </div>
+                 
+
+            </div>
+            <!-- End Column 2 -->
+
+            <!-- Column 3 (Email Viewport) -->
+            <div class="d-none d-md-block col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-6 bg-custom2 p-4">
+                
+               
+
+                <div class="container d-flex flex-column bg-custom2 rounded m-0 p-md-4 h-100 flex-grow-1 bg-black">
+                    <div class="row bg-custom1 p-2 border">
+                        <div class="col-9">
+                            <p><span><b>From:</b></span> Julie Adams</p>
+                            <p><span><b>To:</b></span> You</p>
+                            <p><span><b>Subject:</b></span> Important Changes To Department</p>
+                        </div>
+                        <div class="d-none d-md-block col-3 text-end fw-bold">
+                            <p>6/02/2023</p>
+                            <p>11:35am</p>
+                        </div>
+                    </div>
+                    <div class="row p-2 text-end border-bottom">
+                        <ul class="fa-ul">
+                            <li class="fa-li"><i class="fa-regular fa-star fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-reply fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-envelope-open fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-envelope fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-box-archive fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-trash fa-fw hover-effect"></i></li>
+                            <li class="fa-li"><i class="fa-solid fa-ellipsis fa-fw hover-effect"></i></li>
+                        </ul>
+                    </div>
+                    <div class="email-content row flex-grow-1 text-white p-2 border-bottom">
+                        <p>
+                            <br>To whom it may concern,<br><br>
+                            There are some changes coming to our department that I wish to bring awareness to.<br><br>
+                            Due to ABC Inc.'s recent acquisition of CDE Inc., our executive management has decided that some restructuring of our department is in order so that our transition through this merger can be as seamless as possible.<br><br>
+                            This is, in general, very good news for all of us, as we will be onboarding ten new sales representatives - which will both relieve our current understaffing situation. Additionally, Michael Martinez will no longer be affiliated with the company, effective immediately.<br><br>
+                            I am scheduling a staff meeting for tomorrow from 12 pm to 2 pm where I will outline the steps of this important transition; lunch will be provided. Please feel free to reach out to me at any time during the next few weeks with any questions or concerns.<br><br>
+                            Best regards,<br><br>
+                            Julie Adams<br>
+                            Email: <a href="#"><span class="text-blue">Julie.Adams@ABCinc.com</span></a><br>
+                            Phone: <a href="#"><span class="text-blue">555-555-5555</span></a><br>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End Column 3 -->
+        </div>
+        <!-- End 3 Columns Row -->
+    </div>
+    <!-- End General Page Container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
