@@ -121,3 +121,9 @@ li {
     border-radius: 5px;
     /* -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7); */
 }
+
+textarea{
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+}
