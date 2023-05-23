@@ -14,7 +14,7 @@
     <!-- General Page Container -->
     <div class="general-container container-fluid d-flex flex-column min-vh-100">
         <!-- Navigation Bar -->
-        <div class="row d-flex align-items-center justify-content-between justify-content-xl-between bg-black">
+        <div class="row d-flex align-items-center justify-content-between justify-content-xl-between bg-black no-select">
             <!-- Menu Button -->
             <div class="col-auto d-flex d-xl-none align-items-center">
                 <div class="button-hover-effect is-clickable"><i class="fa-solid fa-bars fa-2xl fa-fw"></i></div>
@@ -43,7 +43,7 @@
             <!-- Column 1 (Folders) -->
             <div class="d-none d-sm-flex d-md-none d-xl-flex flex-column justify-content-between col-sm-4 col-lg-12 col-xl-2 bg-black">
                 <div class="row">
-                    <div class="container mt-4 d-flex flex-column">
+                    <div class="container mt-4 d-flex flex-column no-select">
                         <div class="d-flex justify-content-center">
                             <button type="button" class="stretch-button btn btn-primary">
                                 <span class="text-blue">..</span><i class="fa-solid fa-pen-to-square fa-lg fa-fw"></i>
@@ -280,9 +280,6 @@
             </div>
             <!-- Column 3 (Email Viewport) -->
             <div class="d-none d-md-block col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-6 bg-custom2 p-4">
-                
-               
-
                 <div class="container d-flex flex-column bg-custom2 rounded m-0 p-md-4 h-100 flex-grow-1 bg-black">
                     <div class="row bg-custom1 p-2 border">
                         <div class="col-9">
@@ -295,7 +292,8 @@
                             <p>11:35am</p>
                         </div>
                     </div>
-                    <div class="row p-2 text-end border-bottom">
+                    <!-- Button Toolbar -->
+                    <div class="row p-2 text-end border-bottom no-select">
                         <ul class="fa-ul">
                             <li class="fa-li"><i class="fa-regular fa-star fa-fw button-hover-effect"></i></li>
                             <li class="fa-li"><i class="fa-solid fa-reply fa-fw button-hover-effect"></i></li>
@@ -306,6 +304,7 @@
                             <li class="fa-li"><i class="fa-solid fa-ellipsis fa-fw button-hover-effect"></i></li>
                         </ul>
                     </div>
+                    <!-- End Button Toolbar -->
                     <div class="email-content row flex-grow-1 text-white p-2 border-bottom">
                         <p>
                             <br>To whom it may concern,<br><br>
